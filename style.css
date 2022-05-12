@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #474545;
+}
+h1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 6rem;
+    color: orangered;
+}
+hr {
+    position: absolute;
+    width: 7rem;
+    border: 1px solid #fff;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+    display: block;
+}
+.icons {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+.icons .s-icons {
+    display: flex;
+    margin: 0 25px 30px;
+}
+.icons .s-icons a i {
+    font-size: 40px;
+    color: orangered;
+    transition: 0,5s;
+}
+.icons .s-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 130px;
+    height: 80px;
+    background: #fff;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s;
+}
+.icons .s-icons a::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewY(-45deg);
+}
+.icons .s-icons a::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewX(-45deg);
+}
+.icons .s-icons:hover i {
+    color: #fff;
+}
+.icons .s-icons:hover a {
+    background: orangered;
+    transform: translate(20px, -20px);
+    box-shadow: -50px 50px  50px #000;
+}
+.icons .s-icons:hover a::before {
+    background: #b33a2b;
+}
+.icons .s-icons:hover a::after {
+    background: #e66a5a;
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .icons {
+        left: 55%;
+        margin-top: 200px;
+        flex-wrap: wrap;
+    
+    }
+    hr {
+        top: 30%;
+    }
+}
